@@ -54,7 +54,7 @@
 
   <!-- Terminal Tab Title -->
   <text x="450" y="34" fill="#94a3b8" font-family="'Segoe UI', monospace" font-size="12" font-weight="600" text-anchor="middle">
-    user@recon-station: ~/BlackBox [bash]
+    user@recon-station: ~/Osint-collection [bash]
   </text>
 
   <!-- Terminal Body Content -->

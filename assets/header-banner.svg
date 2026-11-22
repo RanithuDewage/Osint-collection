@@ -135,11 +135,11 @@
     </text>
 
     <!-- Main Title -->
-    <text class="title-text" x="0" y="55" fill="#ffffff" font-size="52" filter="url(#neon-glow)">
-      BLACKBOX
+    <text class="title-text" x="0" y="55" fill="#ffffff" font-size="44" filter="url(#neon-glow)">
+      OSINT
     </text>
-    <text class="title-text" x="350" y="55" fill="#00f2fe" font-size="52" filter="url(#neon-glow)">
-      PRO
+    <text class="title-text" x="180" y="55" fill="#00f2fe" font-size="44" filter="url(#neon-glow)">
+      COLLECTION
     </text>
 
     <!-- Typing Interactive Subtitle -->

@@ -3,9 +3,9 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "blackbox"
+name = "osint-collection"
 version = "2.0.0"
-description = "Advanced Reconnaissance & Security Assessment Framework with Modern GUI"
+description = "OSINT-Collection: Advanced Reconnaissance & Security Assessment Framework with Modern GUI"
 readme = "README.md"
 requires-python = ">=3.10"
 
@@ -21,5 +21,5 @@ py-modules = ["main", "gui"]
 include = ["config*", "modules*", "utils*"]
 
 [project.scripts]
-blackbox = "main:main"
-blackbox-gui = "gui:launch_gui"
+osint-collection = "main:main"
+osint-gui = "gui:launch_gui"

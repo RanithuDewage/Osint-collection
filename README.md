@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header-banner.svg" alt="BlackBox Reconnaissance Suite Banner" width="100%" />
+  <img src="assets/header-banner.svg" alt="OSINT Collection Reconnaissance Suite Banner" width="100%" />
 </p>
 
 <p align="center">
@@ -14,9 +14,9 @@
 
 ## ⚡ Overview
 
-**BlackBox** is an advanced, high-performance network reconnaissance and security assessment suite crafted for ethical hackers, penetration testers, and system administrators. 
+**OSINT Collection** is an advanced, high-performance network reconnaissance and security assessment suite crafted for ethical hackers, penetration testers, and system administrators. 
 
-Featuring both a high-speed **Terminal Command-Line Interface (CLI)** and a sleek, multi-threaded **Cyber Dark Graphical User Interface (GUI)**, BlackBox delivers rapid subnet discovery, parallel multi-port auditing, and deep automated OSINT intelligence gathering with zero external GUI bloat.
+Featuring both a high-speed **Terminal Command-Line Interface (CLI)** and a sleek, multi-threaded **Cyber Dark Graphical User Interface (GUI)**, OSINT Collection delivers rapid subnet discovery, parallel multi-port auditing, and deep automated OSINT intelligence gathering with zero external GUI bloat.
 
 ---
 
@@ -82,7 +82,7 @@ The custom GUI is designed with an obsidian-cyber dark theme, providing intuitiv
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
-│  ⚡ BLACKBOX PRO  Advanced Reconnaissance & Security Framework  ● IDLE   │
+│  ⚡ OSINT COLLECTION  Advanced Recon & Security Framework       ● IDLE   │
 ├────────────────────────────────────────────────────────────────────────┤
 │  [ 🌐 Network Discovery ] [ 🔌 Port Scanner ] [ 🔍 OSINT ] [ 📄 Logs ] │
 ├────────────────────────────────────────────────────────────────────────┤
@@ -108,8 +108,8 @@ Clone or download this repository, then install requirements:
 
 ```bash
 # Clone the repository
-git clone https://github.com/RanithuDewage/BlackBox.git
-cd BlackBox
+git clone https://github.com/RanithuDewage/Osint-collection.git
+cd Osint-collection
 
 # Install requirements
 pip install -r requirements.txt
@@ -131,7 +131,7 @@ python main.py --gui
 
 ### 3. Launch Interactive Terminal Mode
 
-Start BlackBox in interactive CLI mode:
+Start the suite in interactive CLI mode:
 
 ```bash
 python main.py
@@ -154,7 +154,7 @@ The interactive menu will display:
 
 ### 4. Direct Command-Line (Headless / Automation)
 
-BlackBox also supports direct headless CLI execution:
+OSINT Collection also supports direct headless CLI execution:
 
 ```bash
 # Subnet scan
@@ -204,7 +204,7 @@ flowchart TD
 ## 📁 Project Structure
 
 ```text
-BlackBox/
+Osint-collection/
 ├── assets/
 │   ├── header-banner.svg     # Animated cyber header banner
 │   └── terminal-demo.svg     # Animated terminal CLI/GUI simulation
@@ -244,10 +244,10 @@ You can easily rebrand this framework to your own custom name, handle, or organi
 ```python
 # config/settings.py
 
-APP_NAME = "MyToolName"       # Update to your tool name (e.g. CyberRecon)
+APP_NAME = "OSINT-Collection"  # Update to your tool name
 VERSION = "2.0.0"
-AUTHOR = "Your Name / Handle"  # Update to your name
-GITHUB_URL = "https://github.com/your-username/MyToolName"
+AUTHOR = "Ranithu Dewage"      # Update to your name
+GITHUB_URL = "https://github.com/RanithuDewage/Osint-collection"
 ```
 
 All CLI banners, reports, logs, GUI windows, and User-Agents automatically update instantly!
@@ -256,33 +256,11 @@ All CLI banners, reports, logs, GUI windows, and User-Agents automatically updat
 
 ## 📦 Setting Up Git & Pushing to GitHub
 
-Since you haven't linked a Git folder yet, here are the step-by-step instructions to push this project to GitHub or GitLab:
+Since your remote is already linked to `https://github.com/RanithuDewage/Osint-collection.git`:
 
-### Step 1: Initialize Git Repository Locally
-Open PowerShell or your terminal in this directory:
 ```bash
-git init
-git add .
-git commit -m "Initial commit: Rebranded BlackBox v2.0 with custom Modern GUI and animated README"
-```
-
-### Step 2: Create a New Repository on GitHub
-1. Go to [github.com/new](https://github.com/new).
-2. Choose a repository name (e.g., `BlackBox` or your custom project name).
-3. Leave "Initialize with README" **unchecked** (since we already built a great README).
-4. Click **Create repository**.
-
-### Step 3: Link Remote & Push
-Copy your repository URL from GitHub and run:
-```bash
-# Rename branch to main
-git branch -M main
-
-# Add your GitHub remote repository
-git remote add origin https://github.com/RanithuDewage/BlackBox.git
-
-# Push code to GitHub
-git push -u origin main
+# Push code to GitHub (use --force if GitHub created a default README/License)
+git push -u origin main --force
 ```
 
 ---
