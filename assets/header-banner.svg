@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a13" />
+      <stop offset="50%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="20" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="subtle-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Animated Border Gradient -->
+    <linearGradient id="border-pulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe">
+        <animate attributeName="stop-color" values="#00f2fe;#4facfe;#9d4edd;#00f2fe" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#4facfe">
+        <animate attributeName="stop-color" values="#4facfe;#00ff88;#00f2fe;#4facfe" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#00ff88">
+        <animate attributeName="stop-color" values="#00ff88;#9d4edd;#4facfe;#00ff88" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 242, 254, 0.05)" stroke-width="1" />
+      <circle cx="40" cy="40" r="1" fill="rgba(0, 242, 254, 0.2)" />
+    </pattern>
+
+    <style>
+      @keyframes radar-sweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes pulse-dot {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.4); opacity: 1; filter: drop-shadow(0 0 6px #00ff88); }
+      }
+      @keyframes scanline {
+        0% { transform: translateY(-320px); }
+        100% { transform: translateY(320px); }
+      }
+      @keyframes glitch {
+        0%, 92%, 100% { transform: translate(0); }
+        93% { transform: translate(-2px, 1px); }
+        95% { transform: translate(2px, -1px); }
+        97% { transform: translate(-1px, 2px); }
+      }
+      .title-text {
+        font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        font-weight: 900;
+        letter-spacing: 6px;
+        animation: glitch 5s infinite;
+      }
+      .cursor {
+        animation: blink 0.9s infinite;
+      }
+      .radar-arm {
+        transform-origin: 880px 160px;
+        animation: radar-sweep 8s linear infinite;
+      }
+      .pulse-indicator {
+        transform-origin: 75px 45px;
+        animation: pulse-dot 2s infinite ease-in-out;
+      }
+    </style>
+  </defs>
+
+  <!-- Card Background -->
+  <rect x="5" y="5" width="990" height="310" rx="16" fill="url(#bg-grad)" stroke="url(#border-pulse)" stroke-width="2" />
+
+  <!-- Cyber Grid -->
+  <rect x="6" y="6" width="988" height="308" rx="15" fill="url(#grid)" />
+
+  <!-- Scanline Effect -->
+  <line x1="5" y1="0" x2="995" y2="0" stroke="rgba(0, 242, 254, 0.15)" stroke-width="2">
+    <animateTransform attributeName="transform" type="translate" from="0 5" to="0 315" dur="4s" repeatCount="indefinite" />
+  </line>
+
+  <!-- Top Status Bar -->
+  <g transform="translate(25, 25)">
+    <circle class="pulse-indicator" cx="50" cy="20" r="4.5" fill="#00ff88" />
+    <text x="65" y="24" fill="#10b981" font-family="'Segoe UI', monospace" font-size="11" font-weight="700" letter-spacing="1.5">CORE ENGINE ONLINE</text>
+    <rect x="235" y="12" width="1" height="15" fill="#334155" />
+    <text x="250" y="24" fill="#38bdf8" font-family="'Segoe UI', monospace" font-size="11" font-weight="600" letter-spacing="1">DUAL INTERFACE: CLI + GUI</text>
+    <rect x="465" y="12" width="1" height="15" fill="#334155" />
+    <text x="480" y="24" fill="#a78bfa" font-family="'Segoe UI', monospace" font-size="11" font-weight="600" letter-spacing="1">VERSION 2.0.0</text>
+  </g>
+
+  <!-- Cyber Radar (Right Side) -->
+  <g opacity="0.65">
+    <circle cx="870" cy="160" r="85" fill="none" stroke="rgba(0, 242, 254, 0.15)" stroke-width="1.5" />
+    <circle cx="870" cy="160" r="55" fill="none" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1" />
+    <circle cx="870" cy="160" r="25" fill="none" stroke="rgba(0, 242, 254, 0.35)" stroke-width="1" />
+    <line x1="770" y1="160" x2="970" y2="160" stroke="rgba(0, 242, 254, 0.2)" stroke-width="1" stroke-dasharray="3,3" />
+    <line x1="870" y1="60" x2="870" y2="260" stroke="rgba(0, 242, 254, 0.2)" stroke-width="1" stroke-dasharray="3,3" />
+    <!-- Rotating Sweep Arm -->
+    <line class="radar-arm" x1="870" y1="160" x2="955" y2="160" stroke="#00ff88" stroke-width="2" filter="url(#subtle-glow)" />
+    <!-- Blip -->
+    <circle cx="910" cy="125" r="3" fill="#00f2fe">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="845" cy="195" r="2.5" fill="#00ff88">
+      <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Main Hero Brand Typography -->
+  <g transform="translate(65, 130)">
+    <!-- Subtitle Tag -->
+    <text x="0" y="0" fill="#00f2fe" font-family="'Segoe UI', monospace" font-size="13" font-weight="700" letter-spacing="3">
+      ⚡ NEXT-GEN RECONNAISSANCE SUITE
+    </text>
+
+    <!-- Main Title -->
+    <text class="title-text" x="0" y="55" fill="#ffffff" font-size="52" filter="url(#neon-glow)">
+      BLACKBOX
+    </text>
+    <text class="title-text" x="350" y="55" fill="#00f2fe" font-size="52" filter="url(#neon-glow)">
+      PRO
+    </text>
+
+    <!-- Typing Interactive Subtitle -->
+    <g transform="translate(0, 92)">
+      <text x="0" y="0" fill="#94a3b8" font-family="'Segoe UI', Consolas, monospace" font-size="15" font-weight="500">
+        &gt; Network Discovery • Parallel Port Audit • Automated OSINT Recon
+      </text>
+      <rect class="cursor" x="590" y="-14" width="9" height="17" fill="#00f2fe" />
+    </g>
+  </g>
+
+  <!-- Bottom Pills -->
+  <g transform="translate(65, 265)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="135" height="26" rx="6" fill="rgba(0, 242, 254, 0.1)" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1" />
+    <text x="12" y="17" fill="#38bdf8" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600">🖥️ Desktop GUI</text>
+
+    <!-- Pill 2 -->
+    <rect x="145" y="0" width="140" height="26" rx="6" fill="rgba(16, 185, 129, 0.1)" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1" />
+    <text x="157" y="17" fill="#34d399" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600">⚡ Terminal CLI</text>
+
+    <!-- Pill 3 -->
+    <rect x="295" y="0" width="155" height="26" rx="6" fill="rgba(168, 85, 247, 0.1)" stroke="rgba(168, 85, 247, 0.3)" stroke-width="1" />
+    <text x="307" y="17" fill="#c084fc" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600">🔍 Deep OSINT Engine</text>
+
+    <!-- Pill 4 -->
+    <rect x="460" y="0" width="145" height="26" rx="6" fill="rgba(244, 63, 94, 0.1)" stroke="rgba(244, 63, 94, 0.3)" stroke-width="1" />
+    <text x="472" y="17" fill="#fb7185" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="600">📊 PDF / TXT Export</text>
+  </g>
+</svg>
