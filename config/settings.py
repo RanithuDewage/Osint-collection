@@ -7,8 +7,8 @@ import os
 
 APP_NAME = os.getenv("RECON_APP_NAME", "BlackBox")
 VERSION = "2.0.0"
-AUTHOR = os.getenv("RECON_AUTHOR", "YourName / Security Engineer")
+AUTHOR = os.getenv("RECON_AUTHOR", "Ranithu Dewage")
 DESCRIPTION = f"{APP_NAME} Advanced Reconnaissance & Security Assessment Framework"
-GITHUB_URL = "https://github.com/your-username/BlackBox"
+GITHUB_URL = "https://github.com/RanithuDewage/BlackBox"
 
 DEFAULT_TIMEOUT = 5

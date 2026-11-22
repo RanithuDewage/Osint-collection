@@ -108,7 +108,7 @@ Clone or download this repository, then install requirements:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/BlackBox.git
+git clone https://github.com/RanithuDewage/BlackBox.git
 cd BlackBox
 
 # Install requirements
@@ -279,7 +279,7 @@ Copy your repository URL from GitHub and run:
 git branch -M main
 
 # Add your GitHub remote repository
-git remote add origin https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY_NAME>.git
+git remote add origin https://github.com/RanithuDewage/BlackBox.git
 
 # Push code to GitHub
 git push -u origin main
